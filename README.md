@@ -17,14 +17,14 @@ create table edge (id BIGINT, src BIGINT, dst BIGINT);
 
 2. Load data into these tables using COPY command from three files named 
 “vertex_anno.csv”, “edge_anno.csv”, “edge.csv” correspondingly. These files can be 
-found in the folder ‘dataset’. You have to change the path of the data files when 
-running following queries:
+found in the folder ‘dataset’ (These files were too big to upload to github). You have to 
+change the path of the data files when running following queries:
 
-COPY vertex_anno FROM '/Users/ainurainabekova/vertex_anno.csv' DELIMITER ',' CSV;
+COPY vertex_anno FROM '~/dataset/vertex_anno.csv' DELIMITER ',' CSV;
 
-COPY edge_anno FROM ‘Users/ainurainabekova/edge_anno.csv’ DELIMITER ‘,’ CSV;
+COPY edge_anno FROM ‘~/dataset/edge_anno.csv’ DELIMITER ‘,’ CSV;
 
-COPY edge FROM ‘Users/ainurainabekova/edge.csv’ DELIMITER ‘,’ CSV;
+COPY edge FROM ‘~/dataset/edge.csv’ DELIMITER ‘,’ CSV;
 
 
 3. Install JDBC for postgres. 
@@ -33,7 +33,7 @@ COPY edge FROM ‘Users/ainurainabekova/edge.csv’ DELIMITER ‘,’ CSV;
 4. Compile and run java file called “KSnap.java”. Several lines that might need to be changed : 
 
 - connection to your DB (line 41-43). You might need to change username and password for connecting 
-to your DB. In my case username is ‘postgres’ and password is ‘postgre’. 
+to your DB. 
 
 - program runs without passing any parameters, but if you want to change some parameters related 
 to the program you might need to change data structures at the top of the file “KSnap.java”. 
