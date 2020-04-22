@@ -611,14 +611,14 @@ public class KSnap {
 			
 			// copy table for drawing visualization of a summary
 			stmt = c.createStatement();
-			String writingFile1 = "COPY visoutput TO '/Users/ainurainabekova/vis_" + attrEdgeValue[0] + ".csv' DELIMITER ',' CSV HEADER;";
+			String writingFile1 = "COPY visoutput TO '~/vis_" + attrEdgeValue[0] + ".csv' DELIMITER ',' CSV HEADER;";
 			System.out.println(writingFile1);
 			stmt.executeUpdate(writingFile1);
 			stmt.close();
 			
 			// copy the groups_init table into csv file 
 			stmt = c.createStatement();
-			String writingFile = "COPY groups_init TO '/Users/ainurainabekova/output_" +attrEdgeValue[0] +".csv' DELIMITER ',' CSV HEADER;";
+			String writingFile = "COPY groups_init TO '~/output_" +attrEdgeValue[0] +".csv' DELIMITER ',' CSV HEADER;";
 			System.out.println(writingFile);
 			stmt.executeUpdate(writingFile);
 			stmt.close();
